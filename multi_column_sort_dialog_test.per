@@ -1,0 +1,13 @@
+LAYOUT (TEXT="Multi Column Sort Dialog Test")
+TABLE test
+{
+[f01       |f02       |f03       ]
+}
+END
+END
+ATTRIBUTES
+f01 = formonly.string_col, TITLE="String";
+f02 = formonly.int_col, TITLE="Integer";
+f03 = formonly.date_col, TITLE="Date";
+INSTRUCTIONS
+SCREEN RECORD scr(string_col, int_col, date_col);
