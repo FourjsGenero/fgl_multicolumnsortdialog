@@ -18,3 +18,8 @@ The intended usage of this dialog is
                 CALL array-name.sort(l_column_list[i].column_name,  l_column_list[i].reverse)
             END FOR
     
+It will raise a dialog similar to ...
+
+![MultiColumn Sort Dialog](https://user-images.githubusercontent.com/13615993/32205756-fc27c1a4-be55-11e7-8528-74c469220dd5.png)
+
+... where the combobox is populated with the columns of the current table.  The user selects the columns they wish to sort on and the array.sort method is then called.  The sort method is called for each column requested in reverse order so as to break ties correctly.
