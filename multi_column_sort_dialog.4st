@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ANSI_X3.4-1968"?>
+<StyleList>
+    <Style name="Window">
+        <StyleAttribute name="windowType" value="normal"/>
+    </Style>
+    <Style name="Window.dialog">
+        <StyleAttribute name="windowType" value="modal"/>
+        <StyleAttribute name="sizable" value="no"/>
+        <StyleAttribute name="position" value="center"/>
+        <StyleAttribute name="actionPanelPosition" value="bottom"/>
+        <StyleAttribute name="ringMenuPosition" value="bottom"/>
+        <StyleAttribute name="toolBarPosition" value="none"/>
+        <StyleAttribute name="statusBarType" value="none"/>
+        <StyleAttribute name="errorMessagePosition" value="popup"/>
+    </Style>
+    <Style name="Table">
+        <StyleAttribute name="headerAlignment" value="auto"/>
+    </Style>
+    <Style name="Table:even">
+        <StyleAttribute name="backgroundColor" value="systemAlternatebackground"/>
+    </Style>
+</StyleList>

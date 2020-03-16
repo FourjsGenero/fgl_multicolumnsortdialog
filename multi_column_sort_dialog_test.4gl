@@ -6,6 +6,7 @@ IMPORT util
 MAIN
 
 DEFINE arr DYNAMIC ARRAY OF RECORD
+    rowid INTEGER,
     string_col STRING,
     int_col INTEGER,
     date_col DATE
@@ -18,9 +19,11 @@ DEFINE l_column_list multi_column_sort_dialog.column_list_type
     OPTIONS FIELD ORDER FORM
     OPTIONS INPUT WRAP
 
+    CALL ui.Interface.loadStyles("multi_column_sort_dialog")
     CALL ui.Interface.setText("Multi Column Sort Dialog Test")
 
     FOR i = 1 TO 100
+        LET arr[i].rowid = i
         LET arr[i].string_col = ASCII(util.math.rand(26)+65)
         LET arr[i].int_col = util.Math.rand(10)
         LET arr[i].date_col = TODAY + (util.Math.rand(11)-5)
