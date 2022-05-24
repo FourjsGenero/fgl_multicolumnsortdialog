@@ -77,7 +77,7 @@ DEFINE l_reverse BOOLEAN
     CALL d.addTrigger("ON ACTION cancel")
     -- Set reverse to false
     FOR i = 1 TO l_max_columns
-        CALL d.setFieldValue(SFMT("formonly.reverse_%1", i USING "<<<"), false)
+        CALL d.setFieldValue(SFMT("reverse_%1", i USING "<<<"), false)
     END FOR
     WHILE TRUE
         CASE d.nextEvent()
@@ -97,9 +97,9 @@ DEFINE l_reverse BOOLEAN
     ELSE
         CALL l_column_list.clear()
         FOR i = 1 TO l_max_columns
-            LET l_column_name = d.getFieldValue(SFMT("formonly.column_%1", i USING "<<<"))
+            LET l_column_name = d.getFieldValue(SFMT("column_%1", i USING "<<<"))
             IF l_column_name IS NOT NULL THEN
-                LET l_reverse = d.getFieldValue(SFMT("formonly.reverse_%1", i USING "<<<"))
+                LET l_reverse = d.getFieldValue(SFMT("reverse_%1", i USING "<<<"))
                 CALL l_column_list.appendElement()
                 LET l_column_list[l_column_list.getLength()].column_name = l_column_name
                 LET l_column_list[l_column_list.getLength()].reverse = l_reverse

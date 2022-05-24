@@ -25,6 +25,7 @@ DEFINE l_column_list multi_column_sort_dialog.column_list_type
     FOR i = 1 TO 100
         LET arr[i].rowid = i
         LET arr[i].string_col = ASCII(util.math.rand(26)+65)
+        LET arr[i].string_col = arr[i].string_col, arr[i].string_col, arr[i].string_col, arr[i].string_col
         LET arr[i].int_col = util.Math.rand(10)
         LET arr[i].date_col = TODAY + (util.Math.rand(11)-5)
     END FOR
