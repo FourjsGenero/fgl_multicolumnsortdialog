@@ -1,6 +1,6 @@
 # :warning: DEPRECATED :warning:
 
-Genero 6 included built in multi column sort functionality.
+Genero 6 included built-in multi column sort functionality.
 
 This repository still contains useful code with generic dialog and investingating AUI Tree for Table information
 
